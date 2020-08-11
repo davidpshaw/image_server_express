@@ -1,0 +1,13 @@
+version: '3'
+volumes:
+       image_server_upload:
+services:
+        image_server_upload:
+                environment:
+                - PORT=9888
+
+                build: .
+                ports: 
+                 -  127.0.0.1:9888:9888
+                volumes:
+                        - /var/www/docker_storage/band_file_upload:/var/www/docker_storage/band_file_upload
