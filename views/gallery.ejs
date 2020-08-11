@@ -13,7 +13,7 @@
   <body>
     <div class="container-fluid">
         <div class="row">
-            <% var count=0; files.forEach(function(file) { count++; %>
+            <% var count=0; if (files) { files.forEach(function(file) { count++; %>
                 <div class="col-sm">
                     <a href="<%= `/images/${encodeURIComponent(file)}` %>"><img src="<%= `/images/${file}` %>" class="img-thumbnail"></a>
                 </div>
@@ -23,7 +23,7 @@
 
                 <% } %>
 
-            <% }); %>
+            <% }) } %>
                 
         </div>
         </br clear="all" />
